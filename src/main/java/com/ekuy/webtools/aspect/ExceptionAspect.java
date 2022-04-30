@@ -23,7 +23,7 @@ public class ExceptionAspect {
     @ExceptionHandler(value = {Exception.class})
     public Result exceptionHandler(Exception e) {
         e.printStackTrace();
-        return Result.failure(ResultCodeEnum.REQUEST_ERROR);
+        return Result.failure(ResultCodeEnum.UNKNOWN_EXCEPTION);
     }
 
     @ExceptionHandler(value = {BusinessException.class})
