@@ -60,10 +60,6 @@ public class Result<T> {
         return new Result(ResultCodeEnum.OK.getCode(), data, ResultCodeEnum.OK.getMsg());
     }
 
-    public static Result success() {
-        return success(null);
-    }
-
     public static Result success(Object ...params) {
         if (params.length > 0 && params.length % 2 == 0) {
             JSONObject json = new JSONObject();
@@ -75,6 +71,6 @@ public class Result<T> {
             return success(json);
         }
 
-        return success();
+        return new Result(ResultCodeEnum.OK);
     }
 }
