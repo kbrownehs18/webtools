@@ -54,3 +54,18 @@ logging.level.org.hibernate.engine.QueryParameters=DEBUG
 server.port=${SERVER_PORT:8080}
 server.servlet.context-path=${CONTEXT_PATH:/}
 ~~~
+
+### 修改Application
+~~~
+@ComponentScan({"com.ekuy.webtools", "com.xxxxxx"})
+~~~
+
+### 自定义error
+~~~
+首先关闭whitelabel
+server.error.whitelabel.enabled=false
+
+也可以自定义error  page路径
+server.error.path=/error
+~~~
+
