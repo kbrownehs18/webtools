@@ -14,6 +14,7 @@ public enum ResultCodeEnum implements ResultCode {
     FAILURE(5000, "%s"),
     INVALID_REQUEST_PARAMS(5001, "请求参数错误[%s]"),
     INVALID_BIND_PARAMS(5002, "绑定参数错误[%s]"),
+    NOT_MATCH_PARAMS(5003, "请求参数不匹配"),
     REQUEST_ERROR(5500, "请求错误[%s]");
 
     final int code;

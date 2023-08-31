@@ -3,6 +3,7 @@ package com.ekuy.webtools.aspect;
 import com.ekuy.webtools.exception.BusinessException;
 import com.ekuy.webtools.model.Result;
 import com.ekuy.webtools.model.ResultCodeEnum;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -36,5 +37,11 @@ public class ExceptionAspect {
     public Result exceptionHandler(ServletException e) {
         e.printStackTrace();
         return Result.failure(ResultCodeEnum.INVALID_REQUEST_PARAMS, e.getMessage());
+    }
+
+    @ExceptionHandler(value = {HttpMessageNotReadableException.class})
+    public Result exceptionHandler(HttpMessageNotReadableException e) {
+        e.printStackTrace();
+        return Result.failure(ResultCodeEnum.NOT_MATCH_PARAMS);
     }
 }
