@@ -20,6 +20,8 @@ public class CorsConfig {
     private String path;
     @Value("${cors.maxAge:3600}")
     private long maxAge;
+    @Value("${cors.credential:false}")
+    private boolean credential;
 
     @Bean
     public CorsFilter corsFilter() {
@@ -27,7 +29,7 @@ public class CorsConfig {
         config.addAllowedOriginPattern(origin);
         config.addAllowedMethod(method);
         config.addAllowedHeader(header);
-        config.setAllowCredentials(true);
+        config.setAllowCredentials(credential);
         config.setMaxAge(maxAge);
 
         UrlBasedCorsConfigurationSource configSource = new UrlBasedCorsConfigurationSource();
