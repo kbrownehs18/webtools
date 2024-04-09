@@ -3,20 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
     <groupId>com.ekuy</groupId>
     <artifactId>webtools</artifactId>
-    <version>0.2.9</version>
+    <version>1.0.0</version>
 
     <name>webtools</name>
     <url>https://github.com/kbrownehs18/webtools</url>
-    <description>springboot tools</description>
+    <description>web tools</description>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -39,26 +33,20 @@
     </developers>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <fastjson.version>1.2.75</fastjson.version>
-        <hutool.version>5.6.5</hutool.version>
-        <commons-io.version>2.6</commons-io.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <fastjson.version>1.2.83</fastjson.version>
+        <hutool.version>5.8.27</hutool.version>
+        <commons-io.version>2.16.1</commons-io.version>
+        <lombok.version>1.18.32</lombok.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -77,6 +65,13 @@
             <version>${commons-io.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <!-- 只在编译和测试的时候用 -->
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <!-- distributionManagement -->
