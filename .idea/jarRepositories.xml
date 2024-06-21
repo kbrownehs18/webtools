@@ -7,9 +7,24 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="aliyun" />
+      <option name="name" value="aliyun" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss-public-repository-group" />
       <option name="name" value="JBoss Public Maven Repository Group" />
       <option name="url" value="https://repository.jboss.org/nexus/content/groups/public-jboss/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss-public-repository-group" />
+      <option name="name" value="JBoss Public Maven Repository Group" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -25,6 +40,11 @@
       <option name="id" value="aliyun" />
       <option name="name" value="aliyun" />
       <option name="url" value="https://maven.aliyun.com/repository/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="HuaweiCloudSDK" />
+      <option name="name" value="HuaweiCloudSDK" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/huaweicloudsdk/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="alimaven" />
